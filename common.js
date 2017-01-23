@@ -56,14 +56,10 @@ var db = {
             },
             success: function (data) {
                 $('#dashboard').addClass('table-striped');
-                console.log(data);
                 parseJsonData(data);
             },
-            error: function (xhr, status, error) {
-                console.log('all error');
-                console.log(xhr);
-                console.log(status);
-                console.log(error);
+            error: function (xhr, status, error) {  
+                console.log(status + ' : ' + error);
             }
         });
     },
@@ -80,16 +76,15 @@ var db = {
             success: function (d) {
                 $('#loader ').hide();
                 $('.blog-post').show();
-                console.log('get success');
                 blog.bindData(d);
             },
-            error: function (xhr, status, err) {
-                console.log(status + ' : ' + err);
+            error: function (xhr, status, error) {
+                console.log(status + ' : ' + error);
             },
             complete: function (data) {
                 $('#edit').show();
-                $('#save').hide();
-                console.log(data);
+                $('#save').hide(); 
+                
                 var d = data.responseJSON;
                 var bbs = new BoardDB();
                 bbs.title = d.title;
@@ -107,26 +102,20 @@ var db = {
         $.ajax({
             url: db.url + '/databases/' + db.my_db + '/collections/' + db.collection + '?apiKey=' + db.key,
             data: JSON.stringify(datas),
-            type: "POST",
+            type: "POST",  
             contentType: "application/json",
-            timeout: 30000,
             success: function (data) {
                 $('#dashboard').addClass('table-striped');
-                console.log('write success');
                 BootstrapDialog.show({
                     title: 'Info',
                     message: 'Data was added!'
                 });
             },
-            error: function (xhr, status, error) {
-                console.log('write error');
-                console.log(status);
-                console.log(xhr);
-                console.log(error);
+            error: function (xhr, status, error) { 
+                console.log(status + ' : ' + error);
             },
             complete: function (data) {
-                console.log('write complete');
-                db.all();
+                setTimeout(db.all(), 30000);
             }
         });
     },
@@ -137,12 +126,10 @@ var db = {
             async: true,
             timeout: 300000,
             success: function (data) {
-                console.log('remove success');
                 console.log(data);
             },
-            error: function (xhr, status, err) {
-
-                console.log(status + ' : ' + err);
+            error: function (xhr, status, error) { 
+                console.log(status + ' : ' + error);
             },
             complete: function () {
                 BootstrapDialog.show({
@@ -161,16 +148,14 @@ var db = {
             type: "PUT",
             contentType: "application/json",
             success: function (data) {
-                console.log('update success');
-                console.log(data);
                 BootstrapDialog.show({
                     type: BootstrapDialog.TYPE_DANGER,
                     title: 'Info',
                     message: 'Data was updated!'
                 });
             },
-            error: function (xhr, status, err) {
-                console.log(status + ' : ' + err);
+            error: function (xhr, status, error) {
+                console.log(status + ' : ' + error);
             },
             complete: function () {
                 db.get(_id);
@@ -184,11 +169,10 @@ var db = {
             type: "PUT",
             contentType: "application/json",
             success: function (data) {
-                console.log('read success');
                 console.log(data);
             },
-            error: function (xhr, status, err) {
-                console.log(status + ' : ' + err);
+            error: function (xhr, status, error) {
+                console.log(status + ' : ' + error);
             }
         });
     }

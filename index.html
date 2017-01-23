@@ -168,7 +168,7 @@
             createForm.hide();
         });
 
-        $(document).on('click', 'button', function(e) {
+        $(document).on('click', 'button', function(e) { 
                 switch (e.target.id) {
                     case 'create':
                         createForm.slideToggle();
@@ -183,7 +183,7 @@
             .on('click', '#dashboard_data>tr', function(e) {
                 var _id = $(this).attr('id');
                 var url = "examples/blog/index.html?p=" + _id;
-                $(location).attr('href', url);
+                $(location).attr('href', url); 
             });
 
     </script>

@@ -31,7 +31,7 @@ var dashboard = {
             }
         });
         return false;
-    }
+    } 
 }
 
 function bindData(board) {
@@ -62,7 +62,6 @@ function parseData() {
 
 function parseJsonData(datas) {
     $dashboardData.empty();
-
     for (var d in datas) {
         board = new Board();
         board.no = parseInt(d) + 1;
