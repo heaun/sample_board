@@ -176,7 +176,7 @@
                         break;
                     case 'save':
                         createForm.slideUp();
-                        var datas = parseData();
+                        var datas = dashboard.parseFormData();
                         db.write(datas);
                         break;
                 }

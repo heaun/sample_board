@@ -56,7 +56,7 @@ var db = {
             },
             success: function (data) {
                 $('#dashboard').addClass('table-striped');
-                parseJsonData(data);
+                dashboard.parseJsonData(data);
             },
             error: function (xhr, status, error) {  
                 console.log(status + ' : ' + error);
@@ -137,7 +137,7 @@ var db = {
                     title: 'Info',
                     message: 'Data was deleted!'
                 });
-                setTimeout($(location).attr('href', '../dashboard/index.html'), 20000);
+                setTimeout($(location).attr('href', '../../index.html'), 20000);
             }
         });
     },
