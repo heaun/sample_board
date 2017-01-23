@@ -169,6 +169,7 @@
         });
 
         $(document).on('click', 'button', function(e) { 
+            e.preventDefault();
                 switch (e.target.id) {
                     case 'create':
                         createForm.slideToggle();
