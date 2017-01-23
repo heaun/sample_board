@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dashboard>
+  <element>
+    <no>1,001</no>
+    <title>Lorem</title>
+    <name>ipsum</name>
+    <type>dolor</type>
+    <description>sit</description>
+  </element>
+  <element>
+    <no>1,002</no>
+    <title>amet</title>
+    <name>consectetur</name>
+    <type>adipiscing</type>
+    <description>	elit</description>
+  </element>
+  <element>
+    <no>1,003</no>
+    <title>Integer</title>
+    <name>nec</name>
+    <type>odio</type>
+    <description>Praesent</description>
+  </element>
+  <element>
+    <no>1,003</no>
+    <title>libero</title>
+    <name>Sed</name>
+    <type>cursus</type>
+    <description>	ante</description>
+  </element>
+  <element>
+    <no>1,004</no>
+    <title>dapibus</title>
+    <name>diam</name>
+    <type>Sed	</type>
+    <description>nisi</description>
+  </element>
+  <element>
+    <no>1,005</no>
+    <title>Nulla</title>
+    <name>quis</name>
+    <type>sem	</type>
+    <description>at</description>
+  </element>
+  <element>
+    <no>1,006</no>
+    <title>nibh</title>
+    <name>elementum</name>
+    <type>imperdiet	</type>
+    <description>Duis</description>
+  </element>
+  <element>
+    <no>1,007</no>
+    <title>sagittis</title>
+    <name>ipsum</name>
+    <type>Praesent	</type>
+    <description>mauris</description>
+  </element>
+  <element>
+    <no>1,008</no>
+    <title>Fusce</title>
+    <name>nec</name>
+    <type>tellus	</type>
+    <description>sed</description>
+  </element>
+  <element>
+    <no>1,009</no>
+    <title>augue</title>
+    <name>semper</name>
+    <type>porta</type>
+    <description>	Mauris</description>
+  </element>
+  <element>
+    <no>1,010</no>
+    <title>massa</title>
+    <name>Vestibulum</name>
+    <type>lacinia	</type>
+    <description>arcu</description>
+  </element>
+  <element>
+    <no>1,011</no>
+    <title>eget</title>
+    <name>nulla</name>
+    <type>Class	</type>
+    <description>aptent</description>
+  </element>
+  <element>
+    <no>1,012</no>
+    <title>taciti</title>
+    <name>sociosqu</name>
+    <type>ad	</type>
+    <description>litora</description>
+  </element>
+  <element>
+    <no>1,013</no>
+    <title>torquent</title>
+    <name>per</name>
+    <type>conubia	</type>
+    <description>nostra</description>
+  </element>
+  <element>
+    <no>1,014</no>
+    <title>per</title>
+    <name>inceptos</name>
+    <type>himenaeos	</type>
+    <description>Curabitur</description>
+  </element>
+  <element>
+    <no>1,015</no>
+    <title>sodales</title>
+    <name>ligula</name>
+    <type>in</type>
+    <description>libero</description>
+  </element>
+
+</dashboard>
