@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
-    <meta name="author" content=""> 
+    <meta name="author" content="">
 
     <title>KIMS</title>
 
@@ -41,7 +41,6 @@
             font-weight: 600;
             color: cornflowerblue;
         }
-
     </style>
 
 </head>
@@ -56,8 +55,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Project name</a>
+                <a class="navbar-brand" href="index.html">Project :: Sample Board</a>
             </div>
+            <!--
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Dashboard</a></li>
@@ -69,6 +69,7 @@
                     <input type="text" class="form-control" placeholder="Search..." />
                 </form>
             </div>
+-->
         </div>
     </nav>
 
@@ -76,67 +77,71 @@
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
-                    <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="index.html">Dashboard</a></li>
+                    <li><a href="#">Study </a></li>
                     <li><a href="#">Reports</a></li>
                     <li><a href="#">Analytics</a></li>
                     <li><a href="#">Export</a></li>
+                    <li><a href="#">Template</a></li>
                 </ul>
             </div>
 
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <h1 class="page-header">Dashboard</h1>
-                <div class="btn-group" style="margin:10px 0;">
-                    <button id="create" type="button" class="btn btn-primary" aria-haspopup="true" aria-expanded="false">Create</button>
-                </div>
-                <div id="createform" class="dataTable">
-                    <form class="form-horizontal">
-                        <div class="form-group">
-                            <label for="inputTitle" class="col-sm-2 control-label">Title</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputTitle" placeholder="Title" />
+                <div id="main-context">
+                    <div class="btn-group" style="margin:10px 0;">
+                        <button id="create" type="button" class="btn btn-primary" aria-haspopup="true" aria-expanded="false">Create</button>
+                    </div>
+                    <div id="createform" class="dataTable">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="inputTitle" class="col-sm-2 control-label">Title</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputTitle" placeholder="Title" />
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputName" placeholder="Name" />
+                            <div class="form-group">
+                                <label for="inputName" class="col-sm-2 control-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputName" placeholder="Name" />
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="inputType" class="col-sm-2 control-label">Type</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputType" placeholder="Type" />
+                            <div class="form-group">
+                                <label for="inputType" class="col-sm-2 control-label">Type</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputType" placeholder="Type" />
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="inputDescription" class="col-sm-2 control-label">Description</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" id="inputDescription" placeholder="Description"></textarea>
+                            <div class="form-group">
+                                <label for="inputDescription" class="col-sm-2 control-label">Description</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" id="inputDescription" placeholder="Description"></textarea>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button class="btn btn-info pull-right" id="save">Add</button>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button class="btn btn-info pull-right" id="save">Add</button>
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="table-responsive">
-                    <table id="dashboard" class="table table-hover col-sm-10">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Title</th>
-                                <th>Name</th>
-                                <th>DateTime</th>
-                            </tr>
-                        </thead>
-                        <tbody id="dashboard_data"></tbody>
-                    </table>
+                        </form>
+                    </div>
+                    <div class="table-responsive">
+                        <table id="dashboard" class="table table-hover col-sm-10">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Title</th>
+                                    <th>Name</th>
+                                    <th>DateTime</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dashboard_data"></tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -148,7 +153,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')
-
     </script>
     <script src="dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
@@ -163,30 +167,61 @@
     <script>
         var createForm = $('#createform');
 
-        $(document).ready(function(e) {
-            db.all();
-            createForm.hide();
-        });
-
-        $(document).on('click', 'button', function(e) { 
-            e.preventDefault();
-                switch (e.target.id) {
-                    case 'create':
-                        createForm.slideToggle();
-                        break;
-                    case 'save':
-                        createForm.slideUp();
-                        var datas = dashboard.parseFormData();
-                        db.write(datas);
-                        break;
+        var view = {
+                main: $('#main-context'),
+                init: function(e) {
+                    view.main.empty();
+                },
+                study: function() {
+                    var html = $.get('study/cSharp.html').success(function(datas) {
+                        view.main.html(datas);
+                    });
+                },
+                template: function() {
+                    var html = $.get('template.html').success(function(datas) {
+                        view.main.html(datas);
+                    });
                 }
-            })
-            .on('click', '#dashboard_data>tr', function(e) {
-                var _id = $(this).attr('id');
-                var url = "examples/blog/index.html?p=" + _id;
-                $(location).attr('href', url); 
-            });
+                $(document).ready(function(e) {
+                    db.all();
+                    createForm.hide();
+                });
 
+                $(document).on('click', 'button', function(e) {
+                    e.preventDefault();
+                    switch (e.target.id) {
+                        case 'create':
+                            createForm.slideToggle();
+                            break;
+                        case 'save':
+                            createForm.slideUp();
+                            var datas = dashboard.parseFormData();
+                            db.write(datas);
+                            break;
+                    }
+                })
+                .on('click', '#dashboard_data>tr', function(e) {
+                    var _id = $(this).attr('id');
+                    var url = "examples/blog/index.html?p=" + _id;
+                    $(location).attr('href', url);
+                })
+                .on('click', '.nav-sidebar>li', function(e) {
+                    console.log($(this));
+                    $('li').removeClass('active');
+                    $(this).addClass('active');
+                    $('.page-header').text($(this).text());
+                    view.init();
+
+                    switch ($(this).index()) {
+                        case 1:
+                            view.study();
+                            break
+                        case 5:
+                            view.template();
+                            break;
+                    }
+
+                });
     </script>
 
     <div class="modal fade">
