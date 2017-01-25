@@ -1,5 +1,4 @@
-var $loadImage = '<img src="images/preloader.gif" id="loader">';
-var $errorMessage = '<span> There is no data.</span>';
+var $loadImage = '<img src="images/preloader.gif" id="loader">'; 
 
 function Board() {
     var no, title, name, type, description, datetime, flag, key;
@@ -34,7 +33,7 @@ var common = {
             return results[1] || 0;
         }
     }
-}
+};
 
 var db = {
     key: '2s2GVNFmSENPgHzeEQZsf2D6edvedgOu',
