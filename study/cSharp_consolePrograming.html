@@ -23,42 +23,36 @@
         <!-- /.blog-post -->
 
         <div class="blog-post" id="generic">
-            <h2 class="blog-post-title">Generic</h2>
+            <h2 class="blog-post-title">Console Program</h2>
             <p class="blog-post-meta">January 24, 2017 by <a href="#">Eun</a></p>
+ 
+            <h4>Hello World - Console Program</h4>
 
-            <ul>
-                <li>Erasure vs Reification</li>
-                <li>자바지우개제네릭</li>
-                <ul>
-                    <li>컴파일러 트릭. 컴파일된 바이트 코드는 타입 정보를 갖지 않는다.</li>
-                    <li><code>List &lt;T&gt;</code> -&gt; compiler -&gt; <code>List &lt;String&gt;</code></li>
-                    <li>
-                        <pre><code class="cs">using System;  
- async Tas &lt;int, int&gt; AccessTheWebAsync()
+            <pre><code class="cs">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace HelloWorld
 {
-    Console.WriteLine("Hello, World!");
-    string urlContents = await getStringTask;
-    return urlContents.Length;
-}</code></pre>
-                    </li>
-                </ul>
-                <li>C# 구체화제네릭</li>
-                <ul>
-                    <li>클래스를 로딩할때 CLR이 타입 정보를 담은 클래스 코드를 생성한다.</li>
-                </ul>
-                <li>자바 지우개 제네릭의 한계와 단점</li>
-                <ul>
-                    <li> 타입조사(introspection) </li>
-                    <li>오버로드(overload)</li>
-                    <li>객체생성(instantiation)</li>
-                    <li>리플랙션(reflection)</li>
-                    <li>성능(performance)</li>
-                </ul>
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
+</code></pre>
+            <p></p>
+            <ul>
+                <li> <strong> c#은 대소문자를 구분한다. </strong> e.g. using System, Main(), Console.WriteLine ... </li>
+                <li><strong>namespace</strong> : 선언 및 시작점. 프로그램을 전체적으로 구조화하고 그 구조의 영역을 나타내는 부분. 이 구조를 다른 프로그램에서 사용하기 위해서 <strong>using</strong> 이라는 키워드를 사용하는 것이다. </li>
+                <li><strong>class</strong> : 프로젝트는 항상 반드시 하나의 <strong class="red">클래스</strong>를 가지고 있어야 한다. 데이터 타입 구조체로서 하나의 데이터 구조체를 생성하는 부분. 멤버 변수, 멤버 메소드(함수) 등을 둘 수 있고 다른 클래서의 멤버 변수나 멤버 메소드를 사용하기 위해선 객체, 즉 인스턴스를 생성하여 접근 및 사용하는데 그 키워드는 <strong>new </strong>이다. </li>
+                <li><strong>Main()</strong> : 프로젝트는 항상 반드시 하나의 <strong class="red">메소드</strong>를 가지고 있어야 한다. 하나의 데이터 타입 구조체 내부에서 실제 비지니스 로직 및 어떤 행위 등을 담당하는 부분으로 개발자가 실제로 코딩해야 할 부분.</li>
+                <li> 콘솔 프로그램 시작 : <strong> Ctrl + F5</strong></li>
+                <li> 콘솔 프로그램 종료 : <strong> F9</strong></li>
             </ul>
-
-            <h4>타입 조사 (introspection)</h4>
-
-            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+            <p> <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
             <blockquote>
                 <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
             </blockquote>
